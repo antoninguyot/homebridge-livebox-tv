@@ -1,6 +1,6 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
-  "pluginType": "platform",
+  "pluginAlias": "LiveboxTV",
+  "pluginType": "accessory",
   "singular": true,
   "schema": {
     "type": "object",
@@ -9,7 +9,13 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "Livebox 4"
+      },
+      "ip": {
+        "title": "IP Address",
+        "type": "string",
+        "required": true,
+        "default": "192.168.1.12"
       }
     }
   }
