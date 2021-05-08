@@ -35,7 +35,7 @@ class LiveboxTV implements AccessoryPlugin {
   private televisionService: Service;
   private speakerService: Service;
 
-  constructor(log: Logging, config: AccessoryConfig, api: API) {
+  constructor(log: Logging, config: AccessoryConfig) {
     this.log = log;
     this.name = config.name;
     this.ip = config.ip;
@@ -142,7 +142,10 @@ class LiveboxTV implements AccessoryPlugin {
   }
 
   async query(operation, key, mode) {
-    this.log.debug('Requesting : ' + 'http://' + this.ip + ':8080/remoteControl/cmd?operation=' + operation + '&key=' + key + '&mode=' + mode);
+    this.log.debug(
+      'Requesting : ' +
+      'http://' + this.ip + ':8080/remoteControl/cmd?operation=' + operation + '&key=' + key + '&mode=' + mode,
+    );
     const res = await http.get({
       host: this.ip,
       port: 8080,
