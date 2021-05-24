@@ -2,7 +2,7 @@
   "private": false,
   "displayName": "Homebridge Livebox TV",
   "name": "homebridge-livebox-tv",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Control your Livebox TV from Homekit.",
   "license": "Apache-2.0",
   "repository": {
