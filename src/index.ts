@@ -1,6 +1,11 @@
-import {API} from 'homebridge';
-import {LiveboxTV} from './accessory';
+import { API } from 'homebridge';
 
+import { PLATFORM_NAME } from './settings';
+import { LiveboxPlatform } from './platform';
+
+/**
+ * This method registers the platform with Homebridge
+ */
 export = (api: API) => {
-  api.registerAccessory('LiveboxTV', LiveboxTV);
+  api.registerPlatform(PLATFORM_NAME, LiveboxPlatform);
 };

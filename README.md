@@ -16,13 +16,13 @@ also turn on your TV.
 ## Configuration
 
 Add the following accessory to your accessories array :
+
 ```json
 {
-  "accessories": [
+  "platforms": [
     {
-      "name": "Livebox 4",
-      "ip": "192.168.1.12",
-      "accessory": "LiveboxTV"
+      "platform": "Livebox",
+      "ip": "192.168.1.12"
     }
   ]
 }
@@ -30,10 +30,11 @@ Add the following accessory to your accessories array :
 
 Or use the Homebridge Config UI.
 
+> **Note**
+> The plugin now exposes all TVs as external accessories, to overcome a limitation of HomeKit. You'll have to manually add the accessory in the home app with the pairing code found in the Homebridge logs.
+
 ## Known issues
 
-- The TV status isn't yet updated from the Livebox, it is random so you might experience issues when toggling your TV
-  on/off.
 - I only have a Livebox 4 to test on, so it won't work on any other model. If you try though, DM me to let me know if
   anything changed in the new Livebox firmwares.
 

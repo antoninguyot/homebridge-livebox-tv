@@ -1,21 +1,16 @@
 {
   "pluginAlias": "LiveboxTV",
-  "pluginType": "accessory",
+  "pluginType": "platform",
   "singular": true,
   "schema": {
     "type": "object",
     "properties": {
-      "name": {
-        "title": "Name",
-        "type": "string",
-        "required": true,
-        "default": "Livebox 4"
-      },
       "ip": {
         "title": "IP Address",
         "type": "string",
         "required": true,
-        "default": "192.168.1.12"
+        "default": "192.168.1.12",
+        "description": "Enter the IP address of the Livebox TV top-box"
       }
     }
   }
