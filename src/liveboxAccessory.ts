@@ -1,4 +1,4 @@
-import {Service, PlatformAccessory, CharacteristicValue} from 'homebridge';
+import {Service, PlatformAccessory} from 'homebridge';
 
 import {LiveboxPlatform} from './platform';
 import {LiveboxInfo, LiveboxKey} from './types';
@@ -33,7 +33,10 @@ export class LiveboxAccessory {
     this.speakerService.setCharacteristic(this.platform.Characteristic.Name, accessory.context.device.friendlyName);
 
     this.tvService
-      .setCharacteristic(this.platform.Characteristic.SleepDiscoveryMode, this.platform.Characteristic.SleepDiscoveryMode.ALWAYS_DISCOVERABLE);
+      .setCharacteristic(
+        this.platform.Characteristic.SleepDiscoveryMode,
+        this.platform.Characteristic.SleepDiscoveryMode.ALWAYS_DISCOVERABLE,
+      );
 
     // register handlers for the On/Off Characteristic
     this.tvService.getCharacteristic(this.platform.Characteristic.Active)
